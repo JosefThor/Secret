@@ -15,9 +15,19 @@
         .gradient-bg { background: linear-gradient(135deg, #10b981 0%, #7c3aed 50%, #a855f7 100%); }
 
         html { scroll-behavior: smooth; }
-        
         .nav-link { transition: all 0.3s ease; }
         .nav-link:hover { color: #34d399; transform: translateY(-2px); }
+        
+        .hero-content {
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
+        @media (max-width: 768px) {
+            .hero-content {
+                padding-top: 90px;
+                padding-bottom: 60px;
+            }
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
@@ -29,7 +39,7 @@
                 <div class="w-9 h-9 rounded-full gradient-bg flex items-center justify-center text-2xl">💖</div>
                 <span class="text-2xl font-bold heading-font tracking-tight">Оля & Я</span>
             </div>
-            <div class="flex gap-8 text-sm font-medium">
+            <div class="flex gap-6 md:gap-8 text-sm font-medium">
                 <a href="#photos" class="nav-link">Фото</a>
                 <a href="#video" class="nav-link">Видео</a>
                 <a href="#audio" class="nav-link">Аудио</a>
@@ -40,48 +50,40 @@
     </nav>
 
     <!-- Hero -->
-    <section class="min-h-screen gradient-bg flex items-center relative overflow-hidden">
+    <section class="gradient-bg flex items-center relative overflow-hidden">
         <div class="absolute inset-0 bg-[radial-gradient(at_center,#ffffff15_0%,transparent_70%)]"></div>
         
-        <div class="max-w-6xl mx-auto px-6 pt-24 pb-16 text-center relative z-10">
-            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-6 py-2 rounded-full mb-8">
-                <span class="text-sm tracking-widest">27 ИЮНЯ 2025 — 27 ИЮНЯ 2026</span>
+        <div class="max-w-6xl mx-auto px-6 hero-content text-center relative z-10">
+            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2 rounded-full mb-6 text-sm">
+                27 ИЮНЯ 2025 — 27 ИЮНЯ 2026
             </div>
             
-            <h1 class="text-7xl md:text-8xl heading-font font-bold mb-6 leading-none">
+            <h1 class="text-5xl md:text-7xl heading-font font-bold mb-6 leading-tight">
                 С ГОДОВЩИНОЙ,<br>МОЯ ОЛЯ ❤️
             </h1>
             
-            <p class="text-2xl md:text-3xl max-w-2xl mx-auto text-white/90 mb-12">
+            <p class="text-xl md:text-3xl max-w-2xl mx-auto text-white/90 mb-12">
                 Каждый день с тобой — это чудо. Спасибо, что ты есть в моей жизни.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
                 <a href="#photos" 
                    class="px-10 py-5 bg-white text-zinc-900 rounded-2xl font-semibold text-lg hover:scale-105 transition-all flex items-center justify-center gap-3">
-                    Смотреть наши моменты
-                    <span class="text-2xl">📸</span>
+                    Смотреть наши моменты 📸
                 </a>
                 <a href="#timer" 
                    class="px-10 py-5 border-2 border-white/80 hover:bg-white/10 rounded-2xl font-semibold text-lg transition-all">
                     До отпуска осталось...
                 </a>
             </div>
-            
-            <div class="mt-24 text-white/60 text-sm flex justify-center gap-8">
-                <div>❤️ Любовь</div>
-                <div>🌟 Счастье</div>
-                <div>🌹 Навсегда</div>
-            </div>
         </div>
         
         <!-- Floating hearts -->
-        <div class="absolute bottom-10 left-10 text-6xl heart">💕</div>
-        <div class="absolute top-32 right-20 text-5xl heart" style="animation-delay: 1.2s;">💖</div>
-        <div class="absolute bottom-32 right-40 text-7xl heart" style="animation-delay: 2s;">🌹</div>
+        <div class="absolute bottom-10 left-10 text-5xl md:text-6xl heart">💕</div>
+        <div class="absolute top-32 right-10 md:right-20 text-4xl md:text-5xl heart" style="animation-delay: 1.2s;">💖</div>
     </section>
 
-    <!-- Photo Carousel -->
+      <!-- Photo Carousel -->
     <section id="photos" class="py-24 bg-zinc-900">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
